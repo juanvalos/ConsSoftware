@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./index.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class = "layout-calculator">
+        <div class= "layout-screen">
+            <span id = "screen"></span>
+        </div>
+    
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button" onclick="button('7')">
+                    7
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('8')">
+                    8
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('9')">
+                    9
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="operation('x')">
+                    x
+                </div>
+            </div>  
+        </div>
+
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button" onclick="button('4')">
+                    4
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('5')">
+                    5
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('6')">
+                    6
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('-')">
+                    -
+                </div>
+            </div>  
+        </div>
+
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button" onclick="button('1')">
+                    1
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('2')">
+                    2
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('3')">
+                    3
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('+')">
+                    +
+                </div>
+            </div>  
+        </div>
+
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button-zero" onclick="button('0')">
+                    0
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('.')">
+                    .
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="showResult()">
+                    =
+                </div>
+            </div>
+        </div>
+
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button" onclick="button('^')">
+                    ^
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button-zero" onclick="clearScreen()">
+                    clear
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="reportR()">
+                    record
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./index.css" rel="stylesheet">
+
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class = "layout-calculator">
+        <div class= "layout-screen">
+            <span id = "screen"></span>
+        </div>
+    
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button" onclick="button('7')">
+                    7
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('8')">
+                    8
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('9')">
+                    9
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="operation('x')">
+                    x
+                </div>
+            </div>  
+        </div>
+
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button" onclick="button('4')">
+                    4
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('5')">
+                    5
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('6')">
+                    6
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('-')">
+                    -
+                </div>
+            </div>  
+        </div>
+
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button" onclick="button('1')">
+                    1
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('2')">
+                    2
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('3')">
+                    3
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('+')">
+                    +
+                </div>
+            </div>  
+        </div>
+
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button-zero" onclick="button('0')">
+                    0
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="button('.')">
+                    .
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="showResult()">
+                    =
+                </div>
+            </div>
+        </div>
+
+        <div class = "button-container">
+            <div class = "button-separation">
+                <div class = "button" onclick="button('^')">
+                    ^
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button-zero" onclick="clearScreen()">
+                    clear
+                </div>
+            </div>
+            <div class = "button-separation">
+                <div class = "button" onclick="reportR()">
+                    record
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
