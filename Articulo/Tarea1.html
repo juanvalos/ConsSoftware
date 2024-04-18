@@ -85,6 +85,22 @@
             </ul>
         </li>
 
+        <br>
+
+        <li><a href="#18">React, hooks, JSX</a></li>
+            <ul>
+                <li><a href="#19">Data Structures: Objects and Arrays</a></li>
+                <li><a href="#20">Methods</a></li>
+                <li><a href="#21">Objects</a></li>
+                <li><a href="#23">React</a></li>
+                <li><a href="#24">Components</a></li>
+                <li><a href="#25">Hooks</a></li>
+                <li><a href="#26">State</a></li>
+                <li><a href="#27">useState</a></li>
+                <li><a href="#28">useEffect</a></li>
+            </ul>
+        </li>
+
 
 <br>
 <br>
@@ -493,111 +509,186 @@
 
     <br>
 
-<br>
-<br>
-<h1 id="11">Operators in JavaScript</h1>
+    <br>
+    <br>
+    
+    <h1 id="18">React, hooks, JSX</h1>
 
     <br>
     <br>
-    <h2 id="22">Unary Operators</h2>
+
+    <h2 id="19">Data Structures: Objects and Arrays</h2>
+
         <p>
-        One example is the typeof operator, which produces a string value naming the type of the value you give it. <br />
-        console.log(typeof 4.5) <br />
-        // → number <br />
-        console.log(typeof "x") <br />
-        // → string <br />
+            Numbers, Booleans, and strings are the atoms from which data structures are built. <br>
+            <br>
+            Data Sets<br>
+            <br>
+            To work with a chunk of digital data, we first have to find a way to represent it in our machine’s memory. Say, for example, that we want to represent a collection of the numbers 2, 3, 5, 7, and 11. <br/>
+            <br>
+            let listOfNumbers = [2, 3, 5, 7, 11]; <br>
+            <br>
+            console.log(listOfNumbers[2]);<br>
+            console.log(listOfNumbers[0]);<br>
+            console.log(listOfNumbers[2 - 1]);<br>
+            
         </p>
         
     <br>
     <br>
-    <h2 id="33">Boolean Values</h2>
+
+    <h2 id="20">Methods</h2>
+
         <p>
-        It is often useful to have a value that distinguishes between only two possibilities, <br />
-        like “yes” and “no” or “on” and “off”. For this purpose, JavaScript has a Boolean type, <br />
-        which has just two values, true and false, written as those words. <br />
-            
+            Both string and array values contain, in addition to the length property, a number of properties that hold function values.<br/>
+            <br/>
+            let doh = "Doh";<br/>
+            <br/>
+            console.log(typeof doh.toUpperCase);<br/>
+            <br/>
+            console.log(doh.toUpperCase());<br/>
+            <br/>
+            This example demonstrates two methods you can use to manipulate arrays:<br/>
+            <br/>
+            let sequence = [1, 2, 3];<br/>
+            <br/>
+            sequence.push(4);<br/>
+            sequence.push(5);<br/>
+            <br/>
+            console.log(sequence);<br/>
+            console.log(sequence.pop());<br/>
+            console.log(sequence);<br/>        
+        </p>
+        
+    <br>
+    <br>
+    
+    <h2 id="21">Objects</h2>
+
+        <p>
+            The binary in operator, when applied to a string and an object, tells you whether that object has a property with that name.<br/> 
+            <br/> 
+            let anObject = {left: 1, right: 2};<br/> 
+            console.log(anObject.left);<br/> 
+            // → 1<br/> 
+            delete anObject.left;<br/> 
+            console.log(anObject.left);<br/> 
+            <br/> 
+            console.log("left" in anObject);<br/> 
+            console.log("right" in anObject);<br/> 
+            <br/> 
+            To find out what properties an object has, you can use the Object.keys function.<br/> 
+            <br/> 
+            console.log(Object.keys({x: 0, y: 0, z: 2}));<br/> 
+            <br/> 
+        </p>
+
         <br>
         <br>
-        Comparison<br>
+
+    <h2 id="23">React</h2>
+
+        <p>
+            The library for web and native user interfaces.  <br>
+            <br>
+            React lets you build user interfaces out of individual pieces called components. <br>
+            <br>
+            Create your own React components like Thumbnail, LikeButton, and Video. Then combine them into entire screens, pages, and apps.<br>
+        </p>
+
         <br>
-        console.log(3 > 2) <br />
-        // → true <br />
-        console.log(3 < 2) <br />
-        // → false <br />
-        <br />
-        console.log("Garnet" != "Ruby") <br />
-        // → true <br />
-        console.log("Pearl" == "Amethyst") <br />
-        // → false <br />
+        <br>
+
+    <h2 id="23">React</h2>
+
+        <p>
+            The library for web and native user interfaces.  <br>
+            <br>
+            React lets you build user interfaces out of individual pieces called components. <br>
+            <br>
+            Create your own React components like Thumbnail, LikeButton, and Video. Then combine them into entire screens, pages, and apps.<br>
         </p>
 
     <br>
     <br>
-    <h2 id="4">Logical Operators</h2>
-    <p>
-        JavaScript supports three logical operators: and, or, and not. These can be used to “reason” about Booleans. <br />
-        <br />
-        The && operator represents logical and. It is a binary operator, and its result is true only if both the values given to it are true. <br />
-        <br />
-        console.log(true && false) <br />
-        // → false <br />
-        console.log(true && true) <br />
-        // → true <br />
-        <br />
-        The || operator denotes logical or. It produces true if either of the values given to it is true. <br />
-        <br />
-        console.log(false || true) <br />
-        // → true <br />
-        console.log(false || false) <br />
-        // → false <br />
-        Not is written as an exclamation mark (!). It is a unary operator that flips the value given to it—!true produces false and !false gives true. <br />
-        <br />
-        The last logical operator we will look at is not unary, not binary, but ternary, operating on three values. It is written with a question mark and a colon, like this: <br />
-        console.log(true ? 1 : 2); <br />
-        // → 1 <br />
-        console.log(false ? 1 : 2); <br />
-        // → 2 <br />
-        <br />
-    </p>
+
+    <h2 id="24">Components</h2>
+
+        <p>
+            React components are JavaScript functions. Want to show some content conditionally?<br>
+            Use an if statement. Displaying a list? Try array map(). <br>
+        </p>
 
     <br>
     <br>
-    <h2 id="55">Short-circuiting of logical Operators</h2>
-    <p>
-        The logical operators && and || handle values of different types in a peculiar way. <br />
-        They will convert the value on their left side to Boolean type in order to decide what to do, but depending on the operator and the result of that conversion, they will return either the original left-hand value or the right-hand value. <br />
-        <br />
-        console.log(null || "user") <br />
-        // → user<br />
-        console.log("Agnes" || "user") <br />
-        // → Agnes <br />
-        <br />
-        The rules for converting strings and numbers to Boolean values state that 0, NaN, and the empty string ("") count as false, while all the other values count as true. <br />
-        <br />
-        The ?? operator resembles ||, but returns the value on the right only if the one on the left is null or undefined, not if it is some other value that can be converted to false. Often, this is preferable to the behavior of ||. <br />
-        <br />
-        console.log(0 || 100); <br />
-        // → 100 <br />
-        console.log(0 ?? 100); <br />
-        // → 0 <br />
-        console.log(null ?? 100); <br />
-        // → 100 <br />
-        <br />
-    </p>
 
-    <h2 id="66">Intro Functions</h2>
-    <p>
-        Functions are one of the most central tools in JavaScript programming. The concept of wrapping a piece of program in a value has many uses. It gives us a way to structure larger programs, to reduce repetition, <br />
-        to associate names with subprograms, and to isolate these subprograms from each other. <br />
-        <br />
-        const square = function(x) { <br />
-        return x * x; <br />
-        }; <br />
+    <h2 id="25">Hooks</h2>
 
-        console.log(square(12)); <br />
-        // → 144 <br/>
-        <br/>
-    </p>
+        <p>
+            Hooks let you use different React features from your components. You can either use the built-in Hooks or combine them to build your own. <br>
+            State Hooks <br>
+            State lets a component “remember” information like user input. For example, a form component can use state to store the input value, while an image gallery component can use state to store the selected image index.<br>
+            Effect Hooks <br>
+            Effects let a component connect to and synchronize with external systems. This includes dealing with network, browser DOM, animations, widgets written using a different UI library, and other non-React code.<br>
+
+        </p>
+
+    <br>
+    <br>
+
+    <h2 id="26">State</h2>
+
+        <p>
+            Components often need to change what is displayed on the screen as a result of interaction. Writing inside a form should update the text field, clicking "next" in an image carousel should change the displayed image; clicking a button to purchase a product should update the shopping cart. Components need to "remember" things: the text field, the current image, the shopping cart. <br>
+            In React, this type of memory within components is known as state.<br>
+        </p>
+
+    <br>
+    <br>
+
+    <h2 id="27">useState</h2>
+
+        <p>
+            The useState hook provides two things:<br>
+            A state variable to maintain data between renders.<br>
+            A function to set the state to update the variable and trigger React to re-render the component.<br>
+            <br>
+            const [index, setIndex] = useState(0);<br>
+            index is a state variable and  setIndex is the function that sets the state.<br>
+            <br>
+            const [index, setIndex] = useState(0);<br>
+            <br>
+            function handleClick() {<br>
+                setIndex(index + 1);<br>
+            }<br>
+
+        </p>
+
+    <h2 id="28">useEffect</h2>
+
+        <p>
+            Connecting to an external system <br>
+            Some components need to stay connected to the network, some browser API, or a third-party library, while they are displayed on the page. These systems aren’t controlled by React, so they are called external.<br>
+            import { useEffect } from 'react';<br>
+            import { createConnection } from './chat.js';<br>
+            <br>
+            function ChatRoom({ roomId }) {<br>
+            const [serverUrl, setServerUrl] = useState('https://localhost:1234');<br>
+            <br>
+            useEffect(() => {<br>
+                const connection = createConnection(serverUrl, roomId);<br>
+            connection.connect();<br>
+                return () => {<br>
+                connection.disconnect();<br>
+                };<br>
+            }, [serverUrl, roomId]);<br>
+            // ...<br>
+            }<br>
+        </p>
+
+    <br>
+    <br>
+
 </body>
 
 
