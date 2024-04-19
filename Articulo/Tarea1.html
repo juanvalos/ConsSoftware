@@ -101,6 +101,17 @@
             </ul>
         </li>
 
+        <br>
+
+        <li><a href="#29">Routes, Fetch, Methods, URL’S Anatomy</a></li>
+            <ul>
+                <li><a href="#30">Fetch</a></li>
+                <li><a href="#31">Request Option</a></li>
+                <li><a href="#32">Method Options</a></li>
+                <li><a href="#34">URL Anatomy</a></li>
+            </ul>
+        </li>
+
 
 <br>
 <br>
@@ -524,7 +535,8 @@
             <br>
             Data Sets<br>
             <br>
-            To work with a chunk of digital data, we first have to find a way to represent it in our machine’s memory. Say, for example, that we want to represent a collection of the numbers 2, 3, 5, 7, and 11. <br/>
+            To work with a chunk of digital data, we first have to find a way to represent it in our machine’s memory. 
+            Say, for example, that we want to represent a collection of the numbers 2, 3, 5, 7, and 11. <br/>
             <br>
             let listOfNumbers = [2, 3, 5, 7, 11]; <br>
             <br>
@@ -596,19 +608,6 @@
             Create your own React components like Thumbnail, LikeButton, and Video. Then combine them into entire screens, pages, and apps.<br>
         </p>
 
-        <br>
-        <br>
-
-    <h2 id="23">React</h2>
-
-        <p>
-            The library for web and native user interfaces.  <br>
-            <br>
-            React lets you build user interfaces out of individual pieces called components. <br>
-            <br>
-            Create your own React components like Thumbnail, LikeButton, and Video. Then combine them into entire screens, pages, and apps.<br>
-        </p>
-
     <br>
     <br>
 
@@ -639,7 +638,8 @@
     <h2 id="26">State</h2>
 
         <p>
-            Components often need to change what is displayed on the screen as a result of interaction. Writing inside a form should update the text field, clicking "next" in an image carousel should change the displayed image; clicking a button to purchase a product should update the shopping cart. Components need to "remember" things: the text field, the current image, the shopping cart. <br>
+            Components often need to change what is displayed on the screen as a result of interaction. Writing inside a form should update the text field, clicking "next" in an image carousel should change the displayed image; clicking a button to 
+            purchase a product should update the shopping cart. Components need to "remember" things: the text field, the current image, the shopping cart. <br>
             In React, this type of memory within components is known as state.<br>
         </p>
 
@@ -689,6 +689,95 @@
     <br>
     <br>
 
+    <h1 id="29">Routes, Fetch, Methods, URL’S Anatomy</h1>
+    <br>
+    <br>
+
+    <h2 id="30">Fetch</h2>
+
+        <p>
+            Fetch is promise-based and provides a better alternative that can be easily used in service workers. Fetch also integrates advanced HTTP concepts such as CORS and other extensions to HTTP.<br>
+            Fetch is the name of the API for Javascript with which we can make asynchronous HTTP requests using promises.<br>
+            <br>
+            async function logMovies() {<br>
+            const response = await fetch("http://example.com/movies.json");<br>
+            const movies = await response.json();<br>
+            console.log(movies);<br>
+            }<br>
+        </p>
+
+    <br>
+    <br>
+
+    <h2 id="31">Request Options</h2>
+
+        <p>
+            The fetch() method can optionally accept a second parameter, an init object that allows you to control a number of different settings:<br>
+            <br>
+            async function postData(url = "", data = {}) {<br>
+            <br>
+            // Default options are marked with *<br>
+            const response = await fetch(url, {<br>
+                method: "POST", // *GET, POST, PUT, DELETE, etc.<br>
+                headers: {<br>
+                "Content-Type": "application/json",<br>
+                // 'Content-Type': 'application/x-www-form-urlencoded',<br>
+                },<br>
+                body: JSON.stringify(data), // body data type must match "Content-Type" header<br>
+            });<br>
+            return response.json(); // parses JSON response into native JavaScript objects<br>
+            }<br>
+        </p>
+    <br>
+    <br>
+
+    <h2 id="32">Method Options</h2>
+
+        <p>
+            GET <br>
+            <br>
+            The GET method is used to retrieve data on a server. Clients can use the GET method to access all of the resources of a given type, or they can use it to access a specific resource. For instance, a GET request to the /products endpoint of an e-commerce API would return all
+             of the products in the database, while a GET request to the /products/123 endpoint would
+             return the specific product with an ID of 123. GET requests typically do not include a request body, as the client is not attempting to create or update data.<br>
+             <br>
+             POST<br>
+             <br>
+            The POST method is used to create new resources. For instance, if the manager of an e-commerce store wanted to add a new product to the database, they would send a POST request to the /products endpoint. Unlike GET requests, POST requests 
+            typically include a request body, which is where the client specifies the attributes of the resource to be created. For example, a POST request to the /products endpoint might have a request body that looks like this:<br>
+            <br>
+            {<br>
+                "name" : "Sneakers",<br>
+                "color" : "blue",<br>
+                "price" : "59.95",<br>
+                "currency" : "USD",<br>
+            }<br>
+            <br>
+            PUT<br>
+            <br>
+            The PUT method is used to replace an existing resource with an updated version. This method works by replacing the entire resource (i.e., the specific product located at the /products/123 endpoint) with the data that is included in the request’
+            s body. This means that any fields or properties not included in the request body are deleted, and any new fields or properties are added.<br>
+            <br>
+            PATCH<br>
+            <br>
+            The PATCH method is used to update an existing resource. It is similar to PUT, except that PATCH enables clients to update specific properties on a resource—without overwriting the others. For instance, if you have a product resource with fields 
+            for name, brand, and price, but you only want to update the price, you could use the PATCH method to send a request that only includes the new value for the price field. The rest of the resource would remain unchanged. This behavior makes the PATCH 
+            method more flexible and efficient than PUT.<br>
+            <br>
+            DELETE<br>
+            <br>
+            The DELETE method is used to remove data from a database. When a client sends a DELETE request, it is requesting that the resource at the specified URL be removed. For example, a DELETE request to the /products/123 endpoint will permanently 
+            remove the product with an ID of 123 from the database. Some APIs may leverage authorization mechanisms to ensure that only clients with the appropriate permissions are able to delete resources.<br>
+            <br>
+            <br>
+        </p>
+        <img src="Imagen20.png" class="img-responsive" width="600" height="400">
+    <br>
+    <br>
+    
+    <h2 id="34">URL Anatomy</h2>
+
+    <img src="Imagen21.png" class="img-responsive" width="600" height="400">
+    
 </body>
 
 
